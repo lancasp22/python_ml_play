@@ -1,0 +1,5 @@
+  select occ as Occupation, Level1Id, sex,age from  gbc.c1911_icem t1
+ left outer join icem_occupational_matrix t2 on t1.occode = t2.occode
+ left outer join (
+ SELECT @i:=@i+1 AS Level1Id, t.* from (select DescriptionLevel1 from icem_occupational_matrix group by DescriptionLevel1) as t,
+  (SELECT @i:=0) AS t2 limit 0, 500) as t3 on t2.DescriptionLevel1 = t3.DescriptionLevel1 where occ is not null limit 0, 200000;

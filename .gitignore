@@ -1,0 +1,6 @@
+/nb1/*.pyc
+/ud120-projects/*.gz
+/ud120-projects/final_project/emails_by_address
+/word2vec/data/Occupations.csv
+/word2vec/data/Occupations_orig.csv
+/word2vec/*.bin
